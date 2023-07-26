@@ -10,5 +10,6 @@
     <string name="signUp">Ingresar</string>
     <string name="signUpWith">Tambien puedes ingresar a través de:</string>
     <string name="signUp_fb">Iniciar sesión con Facebook</string>
+    <string name="signUp_google">Iniciar sesión con Google</string>
 
 </resources>
