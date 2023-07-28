@@ -171,7 +171,6 @@
                     android:id="@+id/registro_terminos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:justificationMode="inter_word"
                     android:text="@string/registro_terminos"
                     android:textColor="#1E1E1E" />
