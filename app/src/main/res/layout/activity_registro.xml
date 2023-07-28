@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_BG"
+    tools:context=".Registro">
+
+<!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/registro_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/registro_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/welcome"
+            android:textColor="#4D724D"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/registro_subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/registro"
+            android:textColor="#3D69AB"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_titulo" />
+
+        <ImageView
+            android:id="@+id/registro_img_registro"
+            android:layout_width="186dp"
+            android:layout_height="187dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_registro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_subtitulo" />
+
+        <EditText
+            android:id="@+id/registro_campo_nombre"
+            android:layout_width="305dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@color/grey_E9"
+            android:ems="10"
+            android:fontFamily="@font/inter_black"
+            android:hint="@string/registro_campo_nombre"
+            android:inputType="text|textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/grey_7C7B"
+            android:textColorHint="@color/grey_B2B1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_img_registro" />
+
+        <Spinner
+            android:id="@+id/registro_spinner_ciudad"
+            android:layout_width="305dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey_E9"
+            android:prompt="@string/registro_campo_ciudad"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:tooltipText="@string/registro_campo_ciudad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_campo_nombre" />
+
+        <EditText
+            android:id="@+id/registro_campo_correo"
+            android:layout_width="305dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="emailAddress"
+            android:background="@color/grey_E9"
+            android:ems="10"
+            android:fontFamily="@font/inter_black"
+            android:hint="@string/registro_campo_correo"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@color/grey_7C7B"
+            android:textColorHint="@color/grey_B2B1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_spinner_ciudad" />
+
+        <EditText
+            android:id="@+id/registro_campo_contrasena"
+            android:layout_width="305dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="password"
+            android:background="@color/grey_E9"
+            android:ems="10"
+            android:fontFamily="@font/inter_black"
+            android:hint="@string/registro_campo_contrasena"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/grey_7C7B"
+            android:textColorHint="@color/grey_B2B1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_campo_correo" />
+
+        <CheckBox
+            android:id="@+id/registro_checkbox_terminos"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:buttonTint="#2B2A2A"
+            android:fontFamily="@font/inter_medium"
+            android:justificationMode="inter_word"
+            android:text="@string/registro_checkbox_terminos"
+            android:textColor="#1E1E1E"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_campo_contrasena" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registro_btn_guardar"
+            android:layout_width="182dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/rounded_green"
+            android:fontFamily="@font/inter_black"
+            android:text="@string/registro_btn_guardar"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registro_checkbox_terminos" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

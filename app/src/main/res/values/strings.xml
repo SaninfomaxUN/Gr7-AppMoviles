@@ -4,12 +4,21 @@
     <string name="slogan">Haz parte del cambio…</string>
 
     <!-- Login -->
-    <string name="registrate_link"><u>Registrate Aqui</u></string>
-    <string name="campo_correo">Correo Electrónico</string>
-    <string name="campo_contrasena">Contraseña</string>
-    <string name="btn_ingresar">Ingresar</string>
-    <string name="otros_medios">Tambien puedes ingresar a través de:</string>
-    <string name="btn_fb">Iniciar sesión con Facebook</string>
-    <string name="btn_google">Iniciar sesión con Google</string>
+    <string name="login_registrate_link"><u>Registrate Aqui</u></string>
+    <string name="login_campo_correo">Correo Electrónico</string>
+    <string name="login_campo_contrasena">Contraseña</string>
+    <string name="login_btn_ingresar">Ingresar</string>
+    <string name="login_otros_medios">Tambien puedes ingresar a través de:</string>
+    <string name="login_btn_fb">Iniciar sesión con Facebook</string>
+    <string name="login_btn_google">Iniciar sesión con Google</string>
+
+    <!-- Registro -->
+    <string name="registro">Registro</string>
+    <string name="registro_campo_nombre">Nombres y Apellidos</string>
+    <string name="registro_campo_ciudad">Selecciona tu Ciudad</string>
+    <string name="registro_campo_correo">Correo Electrónico</string>
+    <string name="registro_campo_contrasena">Contraseña</string>
+    <string name="registro_checkbox_terminos">Acepto el tratamiento, almacenamiento y uso de mis datos personales, de conformidad con lo establecido en los Términos y Condiciones de uso de la App.</string>
+    <string name="registro_btn_guardar">Guardar</string>
 
 </resources>
