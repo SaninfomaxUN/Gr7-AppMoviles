@@ -169,7 +169,7 @@
 
                 <TextView
                     android:id="@+id/registro_terminos"
-                    android:layout_width="270dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:justificationMode="inter_word"
