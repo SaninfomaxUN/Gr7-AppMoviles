@@ -18,7 +18,7 @@
     <string name="registro_campo_ciudad">Selecciona tu Ciudad</string>
     <string name="registro_campo_correo">Correo Electrónico</string>
     <string name="registro_campo_contrasena">Contraseña</string>
-    <string name="registro_checkbox_terminos">Acepto el tratamiento, almacenamiento y uso de mis datos personales, de conformidad con lo establecido en los Términos y Condiciones de uso de la App.</string>
+    <string name="registro_terminos">Acepto el tratamiento, almacenamiento y uso de mis datos personales, de conformidad con lo establecido en los <a href="link1">Términos y Condiciones</a> de uso de la App.</string>
     <string name="registro_btn_guardar">Guardar</string>
 
 </resources>

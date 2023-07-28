@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,6 +24,7 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         cargarCiudadesSpinner();
+        abrirTerminos();
 
         //Obtener el boton de guardar y le asignamos un listener para que al hacer click nos dirija a la pantalla de login.
         Button btn_guardar = findViewById(R.id.registro_btn_guardar);
@@ -58,6 +64,31 @@ public class Registro extends AppCompatActivity {
         // Asignar el adaptador al spinner
         spinner_ciudad.setAdapter(adaptadorCiudades);
 
+    }
+
+    //Metodo para obtener el texto de los terminos y redirigir
+    public void abrirTerminos(){
+        TextView terminos = findViewById(R.id.registro_terminos);
+        terminos.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Obtener el texto del CheckBox
+        String text = getResources().getString(R.string.registro_terminos);
+
+        // Crear un SpannableString para modificar el CheckBox
+        SpannableString spannableString = new SpannableString(text);
+
+        // Definir el enlace y su comportamiento al hacer clic
+        ClickableSpan link1ClickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                // Acciones a realizar cuando se hace clic en el enlace 1
+                Intent intent = new Intent(Registro.this, Login.class);
+                startActivity(intent);
+            }
+        };
+        spannableString.setSpan(link1ClickableSpan, text.indexOf("Términos y Condiciones"), text.indexOf("Términos y Condiciones") + "Términos y Condiciones".length(), 0);
+        // Aplicar el SpannableString al TextView
+        terminos.setText(spannableString);
 
     }
 
