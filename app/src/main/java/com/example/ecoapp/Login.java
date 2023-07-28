@@ -15,33 +15,35 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //Obtener el textview registrate_link y redirigir a la pantalla de registro.
+        inicializarLinkRegistro();
+
+        inicializarBtnIngresar();
+
+    }
+
+    private void inicializarLinkRegistro() {
         TextView registrate_link = findViewById(R.id.login_registrate_link);
         registrate_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirActividadRegistro(v);
+                //Dirigir a la pantalla de registro.
+                Intent intent = new Intent(Login.this, Registro.class);
+                startActivity(intent);
             }
         });
+    }
 
-
-
-        //Obtenemos el boton de ingresar y le asignamos un listener para que al hacer click
+    private void inicializarBtnIngresar() {
         Button btn_ingresar = findViewById(R.id.login_btn_ingresar);
         btn_ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*abrirActividadRegistro(v);*/
+                //Dirigir a la pantalla de registro.
+                /*Intent intent = new Intent(Login.this, *.class);
+                startActivity(intent);*/
             }
         });
-
-
-
     }
 
-    //Metodo para dirigir a la pantalla de registro.
-    public void abrirActividadRegistro(View view){
-        Intent intent = new Intent(this, Registro.class);
-        startActivity(intent);
-    }
+
 }

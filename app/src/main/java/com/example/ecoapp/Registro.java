@@ -10,7 +10,6 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -23,25 +22,14 @@ public class Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
         cargarCiudadesSpinner();
-        abrirTerminos();
 
-        //Obtener el boton de guardar y le asignamos un listener para que al hacer click nos dirija a la pantalla de login.
-        Button btn_guardar = findViewById(R.id.registro_btn_guardar);
-        btn_guardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirActividadLogin(v);
-            }
-        });
+        inicializarTerminos();
+
+        inicializarBtnGuardar();
     }
 
-
-    //Metodo para dirigir a la pantalla de Login.
-    public void abrirActividadLogin(View view){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-    }
 
     //Metodo para cargar las ciudades en el spinner.
     public void cargarCiudadesSpinner(){
@@ -66,8 +54,22 @@ public class Registro extends AppCompatActivity {
 
     }
 
+
+    private void inicializarBtnGuardar() {
+        //Obtener el boton de guardar y le asignamos un listener para que al hacer click nos dirija a la pantalla de login.
+        Button btn_guardar = findViewById(R.id.registro_btn_guardar);
+        btn_guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cerrar la actividad actual y regresar a la actividad anterior
+                finish();
+            }
+        });
+    }
+
+
     //Metodo para obtener el texto de los terminos y redirigir
-    public void abrirTerminos(){
+    public void inicializarTerminos(){
         TextView terminos = findViewById(R.id.registro_terminos);
         terminos.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -82,7 +84,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Acciones a realizar cuando se hace clic en el enlace 1
-                Intent intent = new Intent(Registro.this, Login.class);
+                Intent intent = new Intent(Registro.this, Terminos.class);
                 startActivity(intent);
             }
         };
