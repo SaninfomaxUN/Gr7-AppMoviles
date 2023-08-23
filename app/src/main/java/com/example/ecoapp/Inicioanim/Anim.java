@@ -1,15 +1,14 @@
 package com.example.ecoapp.Inicioanim;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.RotateAnimation;
-import android.widget.Button;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,20 +32,17 @@ public class Anim extends AppCompatActivity {
         anim_logo_app.setAnimation(animation1);
         anim_login_slogan.setAnimation(animation2);
         anim_titulo.setAnimation(animation1);
-// rotacion anim
-       /* RotateAnimation rotateAnimation = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF,
+/* rotacion anim
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF,
                  0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotateAnimation.setDuration(5000);
         rotateAnimation.setRepeatCount(Animation.INFINITE);
 
         ConstraintLayout constraintLayout = findViewById(R.id.inicio_Rotacion);
         constraintLayout.startAnimation(rotateAnimation);*/
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent login = new Intent(Anim.this, Login.class);
-                startActivity(login);
-            }
+        new Handler().postDelayed(() -> {
+            Intent login = new Intent(Anim.this, Login.class);
+            startActivity(login);
         }, 2000);
 
 
