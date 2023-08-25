@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
@@ -30,6 +31,7 @@ public class Login extends AppCompatActivity {
         TextView anim_slogan = findViewById(R.id.login_slogan);
         TextView anim_registrate_link = findViewById(R.id.login_registrate_link);
         TextView anim_otros_medios = findViewById(R.id.login_otros_medios);
+        LinearLayout linearLayout = findViewById(R.id.barner_f_g);
 
         anim_logo_app.setAnimation(animation2);
         animbtn_ingresar.setAnimation(animation2);
@@ -37,6 +39,7 @@ public class Login extends AppCompatActivity {
         anim_slogan.setAnimation(animation1);
         anim_registrate_link.setAnimation(animation1);
         anim_otros_medios.setAnimation(animation1);
+        linearLayout.setAnimation(animation2);
 
         inicializarLinkRegistro();
 
@@ -46,7 +49,7 @@ public class Login extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Registro.class);
+                Intent intent = new Intent(Login.this, Login.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
             }

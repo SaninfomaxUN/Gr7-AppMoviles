@@ -18,6 +18,7 @@ import java.util.List;
 
 public class Registro extends AppCompatActivity {
 
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,16 @@ public class Registro extends AppCompatActivity {
         inicializarTerminos();
 
         inicializarBtnGuardar();
+
+        button = findViewById(R.id.registro_btn_guardar);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Registro.this, Login.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
     }
 
 
