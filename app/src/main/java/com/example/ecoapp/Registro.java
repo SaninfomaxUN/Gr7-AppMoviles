@@ -97,6 +97,7 @@ public class Registro extends AppCompatActivity {
                 // Acciones a realizar cuando se hace clic en el enlace 1
                 Intent intent = new Intent(Registro.this, Terminos.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
             }
         };
         spannableString.setSpan(link1ClickableSpan, text.indexOf("Términos y Condiciones"), text.indexOf("Términos y Condiciones") + "Términos y Condiciones".length(), 0);

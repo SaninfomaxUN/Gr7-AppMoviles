@@ -26,6 +26,7 @@ public class Terminos extends AppCompatActivity {
             public void onClick(View view) {
                 // Cerrar la actividad actual y regresar a la actividad anterior
                 finish();
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }

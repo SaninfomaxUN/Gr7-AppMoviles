@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.ecoapp.Inicio.Inicio;
+
 public class Login extends AppCompatActivity {
 
     @Override
@@ -29,6 +31,7 @@ public class Login extends AppCompatActivity {
                 //Dirigir a la pantalla de registro.
                 Intent intent = new Intent(Login.this, Registro.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }
@@ -38,9 +41,10 @@ public class Login extends AppCompatActivity {
         btn_ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Dirigir a la pantalla de registro.
-                /*Intent intent = new Intent(Login.this, *.class);
-                startActivity(intent);*/
+                //Dirigir a la pantalla de inicio.
+               Intent intent = new Intent(Login.this, Inicio.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }
