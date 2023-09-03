@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF0ED"
     tools:context=".Inicio.Inicio">
 
 
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="Como me cuidas ?"
+        android:textColor="@color/purple_700"
         android:textAlignment="center"
         android:textSize="30sp"
 
