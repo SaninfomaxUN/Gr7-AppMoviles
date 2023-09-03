@@ -10,6 +10,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,6 +30,8 @@ public class Registro extends AppCompatActivity {
         inicializarTerminos();
 
         inicializarBtnGuardar();
+
+        regresar();
 
         button = findViewById(R.id.registro_btn_guardar);
         button.setOnClickListener(new View.OnClickListener() {
@@ -106,5 +109,17 @@ public class Registro extends AppCompatActivity {
 
     }
 
+
+    public void regresar(){
+        ImageButton btnRegresar = findViewById(R.id.registro_btn_regresar);
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Cerrar la actividad actual y regresar a la actividad anterior
+                finish();
+                overridePendingTransition(R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
+    }
 
 }
